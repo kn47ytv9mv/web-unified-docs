@@ -23,6 +23,8 @@ Each instance has a distinct infrastructure object associated with it, and each 
 
 You can use the `count` argument as a conditional for creating resources. For example, setting a `count = var.creator ? 3 : 0` instructs Terraform to create three instances of the resource when a variable named `creator` is set to `true`. Refer to [​​Conditional Expressions](/terraform/language/expressions/conditionals) for more information.
 
+If you only ever want zero or one instance (for example, `count = var.creator ? 1 : 0`), the experimental [`enabled` meta-argument](/terraform/language/meta-arguments/enabled) accomplishes the same thing without the resulting `[0]` index in the resource's address.
+
 </Tip>
 
 

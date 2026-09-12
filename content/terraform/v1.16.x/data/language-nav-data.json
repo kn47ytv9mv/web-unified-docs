@@ -676,6 +676,10 @@
         "path": "meta-arguments/depends_on"
       },
       {
+        "title": "enabled",
+        "path": "meta-arguments/enabled"
+      },
+      {
         "title": "for_each",
         "path": "meta-arguments/for_each"
       },

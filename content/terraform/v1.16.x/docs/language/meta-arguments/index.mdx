@@ -31,6 +31,10 @@ By default, Terraform configures one infrastructure object for each `resource`, 
 
 > **Hands-on**: Complete the [Manage similar resources with for each](/terraform/tutorials/configuration-language/for-each) tutorial to learn how to create multiple instances of a resource.
 
+## `enabled` (experimental)
+
+You can add the experimental `enabled` argument to `resource`, `data`, and `module` blocks to turn their single instance on or off based on a condition, without the conditionally-indexed address that the `count = <condition> ? 1 : 0` pattern produces. Requires opting in to the `enabled_meta_argument` experiment. Refer to the [`enabled` reference](/terraform/language/meta-arguments/enabled) for details.
+
 ## `lifecycle`
 
 The `lifecycle` block accepts a rule that customizes how Terraform performs the lifecycle stages for each resource. Support for each `lifecycle` rule varies across Terraform configuration blocks. Refer to the [`lifecycle` reference](/terraform/language/meta-arguments/lifecycle) for details. 
